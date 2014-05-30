@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Waitstaff calculator</title>
+	<link rel="stylesheet" href="waitstaff.css">
+</head>
+<body>
+
+
+	<header>
+		<h1>Waitstaff calculator</h1>
+	</header>
+
+
+	<form action="">
+		<table>
+			<caption>Enter the meal details</caption>
+			<tbody>
+				<tr>
+					<th><label for="meal-price">Base meal price:</label></th>
+					<td>$</td>
+					<td><input  id="meal-price" type="number" min="0" step="0.01"></td>
+				</tr>
+				<tr>
+					<th><label for="tax-rate">Tax rate:</label></th>
+					<td>%</td>
+					<td><input  id="tax-rate" type="number" min="0" step="0.01"></td>
+				</tr>
+				<tr>
+					<th><label for="tip-percent">Tip percentage:</label></th>
+					<td>%</td>
+					<td><input  id="tip-percent" type="number" min="0" step="0.01"></td>
+				</tr>
+			</tbody>
+		</table>
+		<div>
+			<input type="submit" value="Submit">
+			<input type="reset" value="Cancel">
+		</div>
+	</form>
+	
+
+	<table>
+		<caption>Customer charges</caption>
+		<tbody>
+			<tr>
+				<th>Subtotal</th>
+				<td>0.00</td>
+			</tr>
+			<tr>
+				<th>Tip</th>
+				<td>0.00</td>
+			</tr>	
+		</tbody>
+		<tfoot>
+			<tr>
+				<th>Total</th>
+				<td>0.00</td>
+			</tr>
+		</tfoot>
+	</table>
+
+
+	<table>
+		<caption>My earnings info</caption>
+		<tbody>
+			<tr>
+				<th>Tip total</th>
+				<td>0.00</td>
+			</tr>
+			<tr>
+				<th>Meal count</th>
+				<td>0</td>
+			</tr>
+			<tr>
+				<th>Average tip per meal</th>
+				<td>0.00</td>
+			</tr>
+		</tbody>
+	</table>
+
+
+	<footer>
+		<button>Reset</button>
+	</footer>
+
+
+</body>
+</html>

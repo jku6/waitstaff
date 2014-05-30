@@ -1,0 +1,60 @@
+body {
+	font: 18px/1.5 Verdana, sans-serif;
+	margin: 0 auto;
+	padding: 2em;
+	background: #fafafa;
+	color: #333;
+	max-width: 40em;
+}
+
+h1 {
+	text-align: center;
+	margin: 0;
+}
+
+table, caption {
+	border: .3em solid #000;
+}
+caption {
+	text-align: center;
+	font-weight: bold;
+	border-bottom: none;
+}
+caption, th, td {
+	padding: .2em .5em;
+}
+th {
+	text-align: right;
+	font-weight: normal;
+}
+
+input {
+	border: 3px solid #000;
+	border-radius: 3px;
+	font: inherit;
+	padding: .2em;
+	display: inline;
+	width: auto;
+}
+input[type="number"] {
+	width: 5em;
+}
+button,
+input[type="submit"],
+input[type="reset"] {
+	border: 3px solid #000;
+	border-radius: 3px;
+	font: inherit;
+	margin: 0;
+	display: inline-block;
+	text-align: center;
+	padding: .2em 1em;
+	box-shadow: .3em .3em 0 rgba( 0, 0, 0, .8 );
+}
+button,
+input[type="submit"]:active,
+input[type="reset"]:active {
+	margin: .2em 0 -.2em .2em;
+	box-shadow: .1em .1em 0 rgba( 0, 0, 0, .9 );
+	transition: margin 60ms, box-shadow 50ms;
+}
