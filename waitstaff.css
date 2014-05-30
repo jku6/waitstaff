@@ -58,3 +58,7 @@ input[type="reset"]:active {
 	box-shadow: .1em .1em 0 rgba( 0, 0, 0, .9 );
 	transition: margin 60ms, box-shadow 50ms;
 }
+
+footer {
+	text-align: right;
+}
