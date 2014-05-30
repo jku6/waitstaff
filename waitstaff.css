@@ -93,10 +93,11 @@ input[type="reset"] {
 	padding: .2rem 1rem;
 	box-shadow: .3rem .3rem 0 rgba( 0, 0, 0, .8 );
 }
-button,
+button:active,
 input[type="submit"]:active,
 input[type="reset"]:active {
-	margin: .2rem 0 -.2rem .2rem;
+	position: relative;
+	top: .2rem;
 	box-shadow: .1rem .1rem 0 rgba( 0, 0, 0, .9 );
 	transition: margin 60ms, box-shadow 50ms;
 }
