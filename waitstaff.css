@@ -2,14 +2,16 @@
 
 body {
 	font: 18px/1.5 Verdana, sans-serif;
-	padding: 2rem;
+	padding: 1rem 3rem;
 	background: #fafafa;
 	color: #333;
 }
 
 main {
-	margin: 0 auto;
-	max-width: 40rem;
+	margin: 1rem auto 0;
+	max-width: 50rem;
+	/* contain float children */
+	overflow: hidden;
 }
 
 h1 {
@@ -25,8 +27,14 @@ footer {
 /* SECTION LAYOUT */
 
 section {
-	margin: 0 0 2rem;
+	margin: 0 0 1.5rem 0;
 	border: .3rem solid #000;
+	float: right;
+	width: 42%;
+}
+#form {
+	float: left;
+	width: 50%;
 }
 h2 {
 	font-size: 120%;
@@ -34,10 +42,10 @@ h2 {
 	text-align: center;
 	margin: 0;
 	padding: .2rem;
-	border-bottom: .3rem solid #000;
+	border-bottom: .2rem solid #000;
 }
 section footer {
-	margin: 3em 0;
+	margin: 5.7rem 0 3rem;
 	text-align: center;
 }
 
@@ -45,7 +53,11 @@ section footer {
 /* TABLES */
 
 table {
-	margin: 1rem 0;
+	margin: 1rem 2rem;
+	border-collapse: collapse;
+}
+tfoot th, tfoot td {
+	border-top: .2rem solid #000;
 }
 th, td {
 	padding: .2rem .5rem;
@@ -75,7 +87,7 @@ input[type="reset"] {
 	border: 3px solid #000;
 	border-radius: 3px;
 	font: inherit;
-	margin: 0;
+	margin: 0 .3rem;
 	display: inline-block;
 	text-align: center;
 	padding: .2rem 1rem;
