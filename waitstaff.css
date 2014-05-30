@@ -1,10 +1,15 @@
+/* BASE */
+
 body {
 	font: 18px/1.5 Verdana, sans-serif;
-	margin: 0 auto;
-	padding: 2em;
+	padding: 2rem;
 	background: #fafafa;
 	color: #333;
-	max-width: 40em;
+}
+
+main {
+	margin: 0 auto;
+	max-width: 40rem;
 }
 
 h1 {
@@ -12,32 +17,57 @@ h1 {
 	margin: 0;
 }
 
-table, caption {
-	border: .3em solid #000;
+footer {
+	text-align: right;
 }
-caption {
-	text-align: center;
+
+
+/* SECTION LAYOUT */
+
+section {
+	margin: 0 0 2rem;
+	border: .3rem solid #000;
+}
+h2 {
+	font-size: 120%;
 	font-weight: bold;
-	border-bottom: none;
+	text-align: center;
+	margin: 0;
+	padding: .2rem;
+	border-bottom: .3rem solid #000;
 }
-caption, th, td {
-	padding: .2em .5em;
+section footer {
+	margin: 3em 0;
+	text-align: center;
+}
+
+
+/* TABLES */
+
+table {
+	margin: 1rem 0;
+}
+th, td {
+	padding: .2rem .5rem;
 }
 th {
 	text-align: right;
 	font-weight: normal;
 }
 
+
+/* FORMS*/
+
 input {
 	border: 3px solid #000;
 	border-radius: 3px;
 	font: inherit;
-	padding: .2em;
+	padding: .2rem;
 	display: inline;
 	width: auto;
 }
 input[type="number"] {
-	width: 5em;
+	width: 5rem;
 }
 button,
 input[type="submit"],
@@ -48,17 +78,13 @@ input[type="reset"] {
 	margin: 0;
 	display: inline-block;
 	text-align: center;
-	padding: .2em 1em;
-	box-shadow: .3em .3em 0 rgba( 0, 0, 0, .8 );
+	padding: .2rem 1rem;
+	box-shadow: .3rem .3rem 0 rgba( 0, 0, 0, .8 );
 }
 button,
 input[type="submit"]:active,
 input[type="reset"]:active {
-	margin: .2em 0 -.2em .2em;
-	box-shadow: .1em .1em 0 rgba( 0, 0, 0, .9 );
+	margin: .2rem 0 -.2rem .2rem;
+	box-shadow: .1rem .1rem 0 rgba( 0, 0, 0, .9 );
 	transition: margin 60ms, box-shadow 50ms;
-}
-
-footer {
-	text-align: right;
 }
