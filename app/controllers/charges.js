@@ -5,4 +5,11 @@ angular.module( 'waitstaff' )
 		tip: 0,
 		total: 0
 	};
+
+	// when a meal charge is rung up …
+	$scope.$on( 'charge', function( event, data ) {
+		$scope.data.subtotal = data.subtotal;
+		$scope.data.tip = data.tip;
+		$scope.data.total = data.subtotal + data.tip;
+	});
 });
