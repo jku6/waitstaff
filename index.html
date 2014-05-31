@@ -1,9 +1,11 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" ng-app="waitstaff">
 <head>
 	<meta charset="UTF-8">
 	<title>Waitstaff calculator</title>
 	<link rel="stylesheet" href="waitstaff.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+	<script src="waitstaff-form.js"></script>
 </head>
 <body>
 
@@ -14,7 +16,7 @@
 
 
 	<main>
-		<section id="form">
+		<section id="form" ng-controller="waitstaffFormController">
 			<h2>Enter the meal details</h2>
 			<form action="">
 				<table>
@@ -22,17 +24,17 @@
 						<tr>
 							<th><label for="meal-price">Base meal price:</label></th>
 							<td>$</td>
-							<td><input  id="meal-price" type="number" min="0" step="0.01"></td>
+							<td><input  id="meal-price" type="number" required min="0" step="0.01" ng-model="data.mealPrice"></td>
 						</tr>
 						<tr>
 							<th><label for="tax-rate">Tax rate:</label></th>
 							<td>%</td>
-							<td><input  id="tax-rate" type="number" min="0" step="0.01"></td>
+							<td><input  id="tax-rate" type="number" required min="0" step="0.01" ng-model="data.taxRate"></td>
 						</tr>
 						<tr>
 							<th><label for="tip-percent">Tip percentage:</label></th>
 							<td>%</td>
-							<td><input  id="tip-percent" type="number" min="0" step="0.01"></td>
+							<td><input  id="tip-percent" type="number" required min="0" step="0.01" ng-model="data.tipPercentage"></td>
 						</tr>
 					</tbody>
 				</table>
