@@ -30,11 +30,11 @@ section {
 	margin: 0 0 1.5rem 0;
 	border: .3rem solid #000;
 	float: right;
-	width: 42%;
+	width: 45%;
 }
 #form {
 	float: left;
-	width: 50%;
+	width: 48%;
 }
 h2 {
 	font-size: 120%;
@@ -100,4 +100,13 @@ input[type="reset"]:active {
 	top: .2rem;
 	box-shadow: .1rem .1rem 0 rgba( 0, 0, 0, .9 );
 	transition: margin 60ms, box-shadow 50ms;
+}
+
+
+
+/* specifics */
+
+/* units in table */
+.units {
+	text-align: center;
 }
