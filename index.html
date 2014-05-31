@@ -5,9 +5,10 @@
 	<title>Waitstaff calculator</title>
 	<link rel="stylesheet" href="waitstaff.css">
 	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
-	<script src="waitstaff.js"></script>
-	<script src="waitstaff-form.js"></script>
-	<script src="waitstaff-charges.js"></script>
+	<script src="app/waitstaff.js"></script>
+	<script src="app/controllers/charges.js"></script>
+	<script src="app/controllers/earnings.js"></script>
+	<script src="app/controllers/form.js"></script>
 </head>
 <body>
 
@@ -18,7 +19,7 @@
 
 
 	<main>
-		<section id="form" ng-controller="waitstaffFormController">
+		<section id="form" ng-controller="formController">
 			<h2>Enter the meal details</h2>
 			<form action="">
 				<table>
@@ -48,7 +49,7 @@
 		</section>
 		
 
-		<section id="charges" ng-controller="waitstaffChargesController">
+		<section id="charges" ng-controller="chargesController">
 			<h2>Customer charges</h2>
 			<table>
 				<tbody>
@@ -71,21 +72,21 @@
 		</section>
 
 
-		<section id="earnings">
+		<section id="earnings" ng-controller="earningsController">
 			<h2>My earnings info</h2>
 			<table>
 				<tbody>
 					<tr>
 						<th>Tip total</th>
-						<td>0.00</td>
+						<td>{{ data.tip.total | currency : $ }}</td>
 					</tr>
 					<tr>
 						<th>Meal count</th>
-						<td>0</td>
+						<td>{{ data.mealCount }}</td>
 					</tr>
 					<tr>
 						<th>Average tip per meal</th>
-						<td>0.00</td>
+						<td>{{ data.tip.average | currency : $ }}</td>
 					</tr>
 				</tbody>
 			</table>

@@ -1,5 +1,5 @@
 // handle form updates and submission
 angular.module( 'waitstaff' )
-.controller( 'waitstaffFormController', function( $scope ) {
+.controller( 'formController', function( $scope ) {
 	$scope.data = {};
 });

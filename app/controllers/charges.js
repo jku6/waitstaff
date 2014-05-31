@@ -1,5 +1,5 @@
 angular.module( 'waitstaff' )
-.controller( 'waitstaffChargesController', function( $scope ) {
+.controller( 'chargesController', function( $scope ) {
 	$scope.data = {
 		subtotal: 0,
 		tip: 0,
