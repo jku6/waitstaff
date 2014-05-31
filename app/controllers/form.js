@@ -1,7 +1,15 @@
 // handle form updates and submission
 angular.module( 'waitstaff' )
 .controller( 'formController', function( $scope, $attrs, $rootScope ) {
-	$scope.data = {};
+	// intialise
+	function init() {
+		$scope.data = {};
+	}
+	// onready
+	init();
+	// onreset
+	$scope.$on( 'reset', init );
+
 
 	// handle submission
 	$scope.calculateMealCharges = function() {
