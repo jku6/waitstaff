@@ -6,6 +6,7 @@
 	<link rel="stylesheet" href="waitstaff.css">
 	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
 	<script src="waitstaff-form.js"></script>
+	<script src="waitstaff-charges.js"></script>
 </head>
 <body>
 
@@ -46,23 +47,23 @@
 		</section>
 		
 
-		<section id="charges">
+		<section id="charges" ng-controller="waitstaffChargesController">
 			<h2>Customer charges</h2>
 			<table>
 				<tbody>
 					<tr>
 						<th>Subtotal</th>
-						<td>0.00</td>
+						<td>{{ data.subtotal | currency : $ }}</td>
 					</tr>
 					<tr>
 						<th>Tip</th>
-						<td>0.00</td>
+						<td>{{ data.tip | currency : $ }}</td>
 					</tr>	
 				</tbody>
 				<tfoot>
 					<tr>
 						<th>Total</th>
-						<td>0.00</td>
+						<td>{{ data.total | currency : $ }}</td>
 					</tr>
 				</tfoot>
 			</table>
