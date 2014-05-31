@@ -1,10 +1,19 @@
 angular.module( 'waitstaff' )
 .controller( 'chargesController', function( $scope ) {
-	$scope.data = {
-		subtotal: 0,
-		tip: 0,
-		total: 0
-	};
+
+	// intialise
+	function init() {
+		$scope.data = {
+			subtotal: 0,
+			tip: 0,
+			total: 0
+		};
+	}
+	// onready
+	init();
+	// onreset
+	$scope.$on( 'reset', init );
+
 
 	// when a meal charge is rung up …
 	$scope.$on( 'charge', function( event, data ) {
@@ -12,4 +21,5 @@ angular.module( 'waitstaff' )
 		$scope.data.tip = data.tip;
 		$scope.data.total = data.subtotal + data.tip;
 	});
+
 });

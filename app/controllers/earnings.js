@@ -1,12 +1,21 @@
 angular.module( 'waitstaff' )
 .controller( 'earningsController', function( $scope ) {
-	$scope.data = {
-		tip: {
-			total: 0,
-			average: 0
-		},
-		mealCount: 0
-	};
+
+	// intialise
+	function init() {
+		$scope.data = {
+			tip: {
+				total: 0,
+				average: 0
+			},
+			mealCount: 0
+		};
+	}
+	// onready
+	init();
+	// onreset
+	$scope.$on( 'reset', init );
+
 
 	// when a meal charge is rung up …
 	$scope.$on( 'charge', function( event, data ) {

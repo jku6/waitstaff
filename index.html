@@ -9,6 +9,7 @@
 	<script src="app/controllers/charges.js"></script>
 	<script src="app/controllers/earnings.js"></script>
 	<script src="app/controllers/form.js"></script>
+	<script src="app/controllers/reset.js"></script>
 </head>
 <body>
 
@@ -94,8 +95,8 @@
 	</main>
 
 
-	<footer>
-		<button>Reset</button>
+	<footer ng-controller="resetController">
+		<button ng-click="reset()">Reset</button>
 	</footer>
 
 
