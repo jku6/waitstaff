@@ -107,6 +107,6 @@ input[type="reset"]:active {
 /* specifics */
 
 /* units in table */
-#form td:nth-of-type(1) {
+.units {
 	text-align: center;
 }

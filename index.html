@@ -26,18 +26,18 @@
 					<tbody>
 						<tr>
 							<th><label for="meal-price">Base meal price:</label></th>
-							<td>$</td>
-							<td><input  id="meal-price" type="number" required min="0" step="0.01" ng-model="data.mealPrice"></td>
+							<td class="units" id="meal-price-units">$</td>
+							<td><input  id="meal-price" aria-describedby="meal-price-units" type="number" required min="0" step="0.01" ng-model="data.mealPrice"></td>
 						</tr>
 						<tr>
 							<th><label for="tax-rate">Tax rate:</label></th>
-							<td>%</td>
-							<td><input  id="tax-rate" type="number" required min="0" step="0.01" ng-model="data.taxRate"></td>
+							<td class="units" id="tax-rate-units">%</td>
+							<td><input  id="tax-rate" aria-describedby="tax-rate-units" type="number" required min="0" step="0.01" ng-model="data.taxRate"></td>
 						</tr>
 						<tr>
 							<th><label for="tip-percent">Tip percentage:</label></th>
-							<td>%</td>
-							<td><input  id="tip-percent" type="number" required min="0" step="0.01" ng-model="data.tipPercentage"></td>
+							<td class="units" id="tip-percent-units">%</td>
+							<td><input  id="tip-percent" aria-describedby="tip-percent-units" type="number" required min="0" step="0.01" ng-model="data.tipPercentage"></td>
 						</tr>
 					</tbody>
 				</table>
