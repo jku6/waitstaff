@@ -13,7 +13,9 @@ angular.module( 'waitstaff' )
 
 	// handle submission
 	$scope.calculateMealCharges = function() {
-		var base, tax, subtotal;
+		var base;
+		var tax;
+		var subtotal;
 
 		base = $scope.data.mealPrice;
 		tax = Math.round( $scope.data.mealPrice * $scope.data.taxRate ) / 100;
