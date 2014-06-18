@@ -8,8 +8,11 @@
 	<script src="app/waitstaff.js"></script>
 	<script src="app/controllers/charges.js"></script>
 	<script src="app/controllers/earnings.js"></script>
+    <script src="app/services/MealService.js"></script>
+    <script src="app/services/IncomeService.js"></script>
 	<script src="app/controllers/form.js"></script>
 	<script src="app/controllers/reset.js"></script>
+
 </head>
 <body>
 
@@ -17,28 +20,26 @@
 	<header>
 		<h1>Waitstaff calculator</h1>
 	</header>
-
-
 	<main>
 		<section id="form" ng-controller="formController">
 			<h2>Enter the meal details</h2>
-			<form ng-submit="calculateMealCharges()">
+			<form ng-submit="submitAndValidate()">
 				<table>
 					<tbody>
 						<tr>
 							<th><label for="meal-price">Base meal price:</label></th>
 							<td class="units" id="meal-price-units">$</td>
-							<td><input  id="meal-price" aria-describedby="meal-price-units" type="number" required min="0" step="0.01" ng-model="data.mealPrice"></td>
+							<td><input  id="meal-price" aria-describedby="meal-price-units" type="number" required min="0" step="0.01" ng-model="meal.price"></td>
 						</tr>
 						<tr>
 							<th><label for="tax-rate">Tax rate:</label></th>
 							<td class="units" id="tax-rate-units">%</td>
-							<td><input  id="tax-rate" aria-describedby="tax-rate-units" type="number" required min="0" step="0.01" ng-model="data.taxRate"></td>
+							<td><input  id="tax-rate" aria-describedby="tax-rate-units" type="number" required min="0" step="0.01" ng-model="meal.taxRate"></td>
 						</tr>
 						<tr>
 							<th><label for="tip-percent">Tip percentage:</label></th>
 							<td class="units" id="tip-percent-units">%</td>
-							<td><input  id="tip-percent" aria-describedby="tip-percent-units" type="number" required min="0" step="0.01" ng-model="data.tipPercentage"></td>
+							<td><input  id="tip-percent" aria-describedby="tip-percent-units" type="number" required min="0" step="0.01" ng-model="meal.tipPercent"></td>
 						</tr>
 					</tbody>
 				</table>
@@ -47,6 +48,25 @@
 					<input type="reset" value="Cancel">
 				</footer>
 			</form>
+            <h4>meal object</h4>
+            <pre>{{meal | json}}</pre>
+            <h4>meal subtotal</h4>
+            <pre>{{meal.subtotal() | json}}</pre>
+            <h4>income object</h4>
+            <pre>{{income | json}}</pre>
+            <h4>income total function</h4>
+            <pre>{{income.total() | json}}</pre>
+            <h4>average tip function</h4>
+            <pre>{{income.average() | json}}</pre>
+            <table>
+                <thead>
+                <tr><th>Price</th><th>tip</th></tr>
+                </thead>
+                <tr ng-repeat="sale in income.meals">
+                    <td><input type="text" ng-model="sale.price"/></td>
+                    <td><input type="text" ng-model="sale.tipPercent"/></td>
+                </tr>
+            </table>
 		</section>
 		
 
